@@ -67,6 +67,14 @@ i {
   font-size: calc(20px + 0.4vw);
   font-weight: 800;
 }
+.card .card-icon {
+  position: absolute;
+  width: calc(60px + 0.2vw);
+  right: calc(3px + 0.2vw);
+  rotate: 12deg;
+  top: 8px;
+  opacity: 0.55;
+}
 
 .navcard {
   background-color: #fff;
@@ -221,8 +229,8 @@ i {
 }
 .dpn-26x58-form .thum-icon {
   padding: 1rem;
-  width: calc(160px + 0.4vw);
-  height: calc(160px + 0.4vw);
+  width: calc(80px + 4vw);
+  height: calc(80px + 4vw);
 }
 
 select.form-select:not([multiple]) {
