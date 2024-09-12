@@ -1,0 +1,255 @@
+/*----------------- Variables Ends Here
+============================================
+------------------- Default Starts  Here   */
+body {
+  background-color: #f9f9f9;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.btn,
+button,
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #333;
+}
+.btn:focus,
+button:focus,
+a:focus {
+  box-shadow: none !important;
+  outline: transparent;
+}
+.btn:active,
+button:active,
+a:active {
+  border-color: transparent !important;
+}
+
+/*----------------- Default Css Ends Here
+============================================
+------------------- Mixins Starts  Here   */
+.flex-v-center {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+i {
+  font-size: calc(18px + 0.2vw);
+}
+
+.btn {
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/*----------------- Mixins Ends Here
+============================================
+-------------------  Card Components   */
+.card {
+  border-radius: 0;
+  border-color: #dee2e6;
+  background-color: #fff;
+  padding: 1rem;
+}
+.card .count {
+  font-size: calc(20px + 0.4vw);
+  font-weight: 800;
+}
+
+.navcard {
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #dee2e6;
+}
+.navcard .btn-nav {
+  width: calc(34px + 0.4vw);
+  height: calc(34px + 0.4vw);
+  background-color: #f0f0f0;
+  border-radius: 0;
+  display: grid;
+  place-content: center;
+}
+.navcard .btn-nav i {
+  font-size: calc(18px + 0.2vw);
+}
+.navcard .page-title {
+  font-size: calc(18px + 0.4vw);
+}
+
+/*----------------- Cards Ends Here
+============================================
+-------------------  Buttons Components   */
+.btn-primary {
+  background-color: #696cff;
+  border-color: #696cff;
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #696cff;
+  box-shadow: 0 0 14px rgba(105, 108, 255, 0.4);
+}
+
+/*----------------- Buttons Ends Here
+============================================
+-------------------  Layout css   */
+.main-content-area {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.35s ease-in-out;
+  max-width: calc(100% - 264px);
+  margin-left: auto;
+}
+.main-content-area header {
+  background-color: #fff;
+}
+.main-content-area header.navbar-dpn-top {
+  gap: 14px;
+}
+.main-content-area header.navbar-dpn-top .darpan-logo-text {
+  font-family: samarkan;
+  font-size: calc(22px + 0.2vw);
+}
+
+/*----------------- Buttons Ends Here
+============================================
+--------  Floating Labels Styles in Form  */
+.dpn-26x58-form .form-floating label {
+  transform: translateY(-8px);
+}
+.dpn-26x58-form .form-floating .form-text {
+  font-size: calc(9px + 0.2vw);
+}
+.dpn-26x58-form .form-floating .form-select,
+.dpn-26x58-form .form-floating .form-control {
+  padding: 0.75rem 0.75rem;
+  border-radius: 0;
+  height: calc(2.5rem + var(--bs-border-width) * 2);
+}
+.dpn-26x58-form .form-floating .form-select:not(:-moz-placeholder-shown), .dpn-26x58-form .form-floating .form-control:not(:-moz-placeholder-shown) {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+.dpn-26x58-form .form-floating .form-select:not(:placeholder-shown),
+.dpn-26x58-form .form-floating .form-control:not(:placeholder-shown) {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+.dpn-26x58-form .form-floating .form-select:not(:-moz-placeholder-shown) ~ label, .dpn-26x58-form .form-floating .form-control:not(:-moz-placeholder-shown) ~ label {
+  height: auto;
+  transform: scale(0.85) translateY(-1.75rem) translateX(0.15rem);
+}
+.dpn-26x58-form .form-floating .form-select:not(:placeholder-shown) ~ label,
+.dpn-26x58-form .form-floating .form-control:not(:placeholder-shown) ~ label {
+  height: auto;
+  transform: scale(0.85) translateY(-1.75rem) translateX(0.15rem);
+}
+.dpn-26x58-form .form-floating .form-select:not(:-moz-placeholder-shown) ~ label::after, .dpn-26x58-form .form-floating .form-control:not(:-moz-placeholder-shown) ~ label::after {
+  position: absolute;
+  inset: 1rem 0.375rem;
+  z-index: -1;
+  height: auto;
+}
+.dpn-26x58-form .form-floating .form-select:not(:placeholder-shown) ~ label::after,
+.dpn-26x58-form .form-floating .form-control:not(:placeholder-shown) ~ label::after {
+  position: absolute;
+  inset: 1rem 0.375rem;
+  z-index: -1;
+  height: auto;
+}
+.dpn-26x58-form .form-floating .form-select:focus,
+.dpn-26x58-form .form-floating .form-control:focus {
+  box-shadow: none !important;
+}
+.dpn-26x58-form .form-floating .form-select:focus ~ label,
+.dpn-26x58-form .form-floating .form-control:focus ~ label {
+  transform: scale(0.85) translateY(-1.75rem) translateX(0.15rem);
+}
+.dpn-26x58-form .form-floating textarea.form-control {
+  height: auto;
+}
+.dpn-26x58-form .thumb-icon-upload-wrapper {
+  border: 1px dashed #c1c1c1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.75rem 1.75rem;
+  padding-left: 2.75rem;
+}
+.dpn-26x58-form .thumb-icon-upload-wrapper label {
+  width: 100%;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  padding: 2rem 0;
+}
+.dpn-26x58-form .thumb-icon-upload-wrapper .instructions {
+  position: relative;
+  padding: 1rem;
+}
+.dpn-26x58-form .thumb-icon-upload-wrapper .instructions .title {
+  font-size: calc(16px + 0.1vw);
+}
+.dpn-26x58-form .thumb-icon-upload-wrapper .instructions ul {
+  padding: 0;
+  padding-left: 10px;
+  font-size: calc(10px + 0.2vw);
+}
+.dpn-26x58-form .thumb-icon-upload-wrapper .instructions::after {
+  position: absolute;
+  content: "";
+  height: 90%;
+  width: 1px;
+  background-color: #f2f2f2;
+  top: 40%;
+  left: -8%;
+  transform: translateY(-40%);
+}
+.dpn-26x58-form .thum-icon {
+  padding: 1rem;
+  width: calc(160px + 0.4vw);
+  height: calc(160px + 0.4vw);
+}
+
+select.form-select:not([multiple]) {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  border-radius: 0 !important;
+}
+
+/*---------- Forms Component Ends Here
+============================================
+-------------------  Modal css   */
+.user-modal-one .modal-content {
+  border-radius: 0;
+}
+
+.modal-backdrop {
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: unset !important;
+}
+
+/*----------------- Modal Ends Here
+============================================
+-------------------  Responsive css   */
+@media (min-width: 768px) {
+  .content {
+    width: auto;
+  }
+}/*# sourceMappingURL=common.css.map */

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard LayOut</title>
+    <link rel="stylesheet" href="css/common/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/sidebar/sidebar.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="quickpage-layout">
+      <nav class="navbar navbar-light navbar-vertical navbar-expand-xl navbar-bpn2658">
+        <div class="menu-wrapper-dpn2658">
+          <div class="d-flex align-items-center">
+            <a class="navbar-brand" href="index.html">
+              <div class="d-flex align-items-center py-3">
+                <img class="me-2" src="images/logo.png" alt="logo" width="80" />
+              </div>
+            </a>
+            <div class="toggle-icon-wrapper">
+              <button class="btn navbar-toggler-humburger-icon navbar-vertical-toggle" data-bs-toggle="tooltip" data-bs-placement="left" aria-label="Toggle Navigation" data-bs-original-title="Toggle Navigation">
+                <span class="navbar-toggle-icon">
+                  <span class="toggle-line"></span>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
+            <div class="navbar-vertical-content scrollbar">
+              <ul class="navbar-nav flex-column mb-3" id="navbarVerticalNav">
+                <li class="nav-item">
+                  <a class="nav-link dropdown-indicator collapsed" href="#dashboard" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="dashboard">
+                    <div class="d-flex align-items-center">
+                      <span class="nav-link-icon">
+                        <svg class="svg-inline--fa fa-chart-pie fa-w-17" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chart-pie" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 544 512" data-fa-i2svg=""><path fill="currentColor" d="M527.79 288H290.5l158.03 158.03c6.04 6.04 15.98 6.53 22.19.68 38.7-36.46 65.32-85.61 73.13-140.86 1.34-9.46-6.51-17.85-16.06-17.85zm-15.83-64.8C503.72 103.74 408.26 8.28 288.8.04 279.68-.59 272 7.1 272 16.24V240h223.77c9.14 0 16.82-7.68 16.19-16.8zM224 288V50.71c0-9.55-8.39-17.4-17.84-16.06C86.99 51.49-4.1 155.6.14 280.37 4.5 408.51 114.83 513.59 243.03 511.98c50.4-.63 96.97-16.87 135.26-44.03 7.9-5.6 8.42-17.23 1.57-24.08L224 288z"></path></svg>
+                      </span>
+                      <span class="nav-link-text ps-1">Dashboard</span>
+                    </div>
+                  </a>
+                  <ul class="nav collapse" id="dashboard" style="">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="index.html">
+                        <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Default</span></div>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="dashboard/analytics.html">
+                        <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Analytics</span></div>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="dashboard/crm.html">
+                        <div class="d-flex align-items-center"><span class="nav-link-text ps-1">CRM</span></div>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="dashboard/e-commerce.html">
+                        <div class="d-flex align-items-center"><span class="nav-link-text ps-1">E commerce</span></div>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="dashboard/lms.html">
+                        <div class="d-flex align-items-center"><span class="nav-link-text ps-1">LMS</span><span class="badge rounded-pill ms-2 badge-subtle-success">New</span></div>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="dashboard/project-management.html">
+                        <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Management</span></div>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="dashboard/saas.html">
+                        <div class="d-flex align-items-center"><span class="nav-link-text ps-1">SaaS</span></div>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="dashboard/support-desk.html">
+                        <div class="d-flex align-items-center">
+                          <span class="nav-link-text ps-1">Support desk</span>
+                          <span class="badge rounded-pill ms-2 badge-subtle-success">New</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <!-- label-->
+                  <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                    <div class="col-auto navbar-vertical-label">Users Actions</div>
+                    <div class="col ps-0">
+                      <hr class="mb-0 navbar-vertical-divider" />
+                    </div>
+                  </div>
+
+                  <a class="nav-link" href="app/calendar.html" role="button">
+                    <div class="d-flex align-items-center">
+                      <span class="nav-link-icon">
+                        <i class="fa fa-calendar-alt fa-w-14"></i>
+                      </span>
+                      <span class="nav-link-text ps-1">Calendar</span>
+                    </div>
+                  </a>
+
+                  <a class="nav-link" href="app/chat.html" role="button">
+                    <div class="d-flex align-items-center">
+                      <span class="nav-link-icon"> <i class="fas fa-comments"></i> </span>
+                      <span class="nav-link-text ps-1">Chat</span>
+                    </div>
+                  </a>
+                  <a class="nav-link dropdown-indicator" href="#email" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="email">
+                    <div class="d-flex align-items-center">
+                      <span class="nav-link-icon">
+                        <i class="fas fa-envelope-open"></i>
+                      </span>
+                      <span class="nav-link-text ps-1">Email</span>
+                    </div>
+                  </a>
+                  <ul class="nav collapse" id="email">
+                    <li class="nav-item">
+                      <a class="nav-link" href="app/email/inbox.html">
+                        <div class="d-flex align-items-center">
+                          <span class="nav-link-text ps-1">Inbox</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="app/email/email-detail.html">
+                        <div class="d-flex align-items-center">
+                          <span class="nav-link-text ps-1">Email detail</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="app/email/compose.html">
+                        <div class="d-flex align-items-center">
+                          <span class="nav-link-text ps-1">Compose</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <a class="nav-link dropdown-indicator" href="#events" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="events">
+                    <div class="d-flex align-items-center">
+                      <span class="nav-link-icon">
+                        <i class="fas fa-calendar-day"></i>
+                      </span>
+                      <span class="nav-link-text ps-1">Events</span>
+                    </div>
+                  </a>
+                  <ul class="nav collapse" id="events">
+                    <li class="nav-item">
+                      <a class="nav-link" href="app/events/create-an-event.html">
+                        <div class="d-flex align-items-center">
+                          <span class="nav-link-text ps-1">Create an event</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="app/events/event-detail.html">
+                        <div class="d-flex align-items-center">
+                          <span class="nav-link-text ps-1">Event detail</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="app/events/event-list.html">
+                        <div class="d-flex align-items-center">
+                          <span class="nav-link-text ps-1">Event list</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <!-- label-->
+                  <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                    <div class="col-auto navbar-vertical-label">Reports</div>
+                    <div class="col ps-0">
+                      <hr class="mb-0 navbar-vertical-divider" />
+                    </div>
+                  </div>
+
+                  <a class="nav-link" href="app/calendar.html" role="button">
+                    <div class="d-flex align-items-center">
+                      <span class="nav-link-icon">
+                        <i class="fa fa-calendar-alt fa-w-14"></i>
+                      </span>
+                      <span class="nav-link-text ps-1">Calendar</span>
+                    </div>
+                  </a>
+
+                  <a class="nav-link" href="app/chat.html" role="button">
+                    <div class="d-flex align-items-center">
+                      <span class="nav-link-icon"> <i class="fas fa-comments"></i> </span>
+                      <span class="nav-link-text ps-1">Chat</span>
+                    </div>
+                  </a>
+                  <a class="nav-link dropdown-indicator" href="#email" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="email">
+                    <div class="d-flex align-items-center">
+                      <span class="nav-link-icon">
+                        <i class="fas fa-envelope-open"></i>
+                      </span>
+                      <span class="nav-link-text ps-1">Email</span>
+                    </div>
+                  </a>
+                  <ul class="nav collapse" id="email">
+                    <li class="nav-item">
+                      <a class="nav-link" href="app/email/inbox.html">
+                        <div class="d-flex align-items-center">
+                          <span class="nav-link-text ps-1">Inbox</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="app/email/email-detail.html">
+                        <div class="d-flex align-items-center">
+                          <span class="nav-link-text ps-1">Email detail</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="app/email/compose.html">
+                        <div class="d-flex align-items-center">
+                          <span class="nav-link-text ps-1">Compose</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <a class="nav-link dropdown-indicator" href="#events" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="events">
+                    <div class="d-flex align-items-center">
+                      <span class="nav-link-icon">
+                        <i class="fas fa-calendar-day"></i>
+                      </span>
+                      <span class="nav-link-text ps-1">Events</span>
+                    </div>
+                  </a>
+                  <ul class="nav collapse" id="events">
+                    <li class="nav-item">
+                      <a class="nav-link" href="app/events/create-an-event.html">
+                        <div class="d-flex align-items-center">
+                          <span class="nav-link-text ps-1">Create an event</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="app/events/event-detail.html">
+                        <div class="d-flex align-items-center">
+                          <span class="nav-link-text ps-1">Event detail</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="app/events/event-list.html">
+                        <div class="d-flex align-items-center">
+                          <span class="nav-link-text ps-1">Event list</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="settings my-3">
+                <div class="card shadow-none">
+                  <div class="card-body alert mb-0" role="alert">
+                    <div class="btn-close-falcon-container">
+                      <button class="btn btn-link btn-close-falcon p-0" aria-label="Close" data-bs-dismiss="alert"></button>
+                    </div>
+                    <div class="text-center">
+                      <img src="assets/img/icons/spot-illustrations/navbar-vertical.png" alt="" width="80" />
+                      <p class="fs-11 mt-2">
+                        Loving what you see? <br />Get your copy of
+                        <a href="#!">Falcon</a>
+                      </p>
+                      <div class="d-grid">
+                        <a class="btn btn-sm btn-primary" href="https://themes.getbootstrap.com/product/falcon-admin-dashboard-webapp-template/" target="_blank">Purchase</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- sidebar ends here -->
+      <main class="main-panel">
+        <div class="main-header">
+          <div class="main-header-logo">
+            <!-- Logo Header -->
+            <div class="logo-header" data-background-color="dark">
+              <a href="index.html" class="logo">
+                <img src="assets/img/kaiadmin/logo_light.svg" alt="navbar brand" class="navbar-brand" height="20" />
+              </a>
+              <div class="nav-toggle">
+                <button class="btn btn-toggle toggle-sidebar">
+                  <i class="gg-menu-right"></i>
+                </button>
+                <button class="btn btn-toggle sidenav-toggler">
+                  <i class="gg-menu-left"></i>
+                </button>
+              </div>
+              <button class="topbar-toggler more">
+                <i class="gg-more-vertical-alt"></i>
+              </button>
+            </div>
+            <!-- End Logo Header -->
+          </div>
+          <!-- Navbar Header -->
+          <nav class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom">
+            <div class="container-fluid">
+              <nav class="navbar navbar-header-left navbar-expand-lg navbar-form nav-search p-0 d-none d-lg-flex">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <button type="submit" class="btn btn-search pe-1">
+                      <i class="fa fa-search search-icon"></i>
+                    </button>
+                  </div>
+                  <input type="text" placeholder="Search ..." class="form-control" />
+                </div>
+              </nav>
+
+              <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
+                <li class="nav-item topbar-icon dropdown hidden-caret d-flex d-lg-none">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true">
+                    <i class="fa fa-search"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-search animated fadeIn">
+                    <form class="navbar-left navbar-form nav-search">
+                      <div class="input-group">
+                        <input type="text" placeholder="Search ..." class="form-control" />
+                      </div>
+                    </form>
+                  </ul>
+                </li>
+                <li class="nav-item topbar-icon dropdown hidden-caret">
+                  <a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                  <ul class="dropdown-menu messages-notif-box animated fadeIn" aria-labelledby="messageDropdown">
+                    <li>
+                      <div class="dropdown-title d-flex justify-content-between align-items-center">
+                        Messages
+                        <a href="#" class="small">Mark all as read</a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="message-notif-scroll scrollbar-outer">
+                        <div class="notif-center">
+                          <a href="#">
+                            <div class="notif-img">
+                              <img src="assets/img/jm_denis.jpg" alt="Img Profile" />
+                            </div>
+                            <div class="notif-content">
+                              <span class="subject">Jimmy Denis</span>
+                              <span class="block"> How are you ? </span>
+                              <span class="time">5 minutes ago</span>
+                            </div>
+                          </a>
+                          <a href="#">
+                            <div class="notif-img">
+                              <img src="assets/img/chadengle.jpg" alt="Img Profile" />
+                            </div>
+                            <div class="notif-content">
+                              <span class="subject">Chad</span>
+                              <span class="block"> Ok, Thanks ! </span>
+                              <span class="time">12 minutes ago</span>
+                            </div>
+                          </a>
+                          <a href="#">
+                            <div class="notif-img">
+                              <img src="assets/img/mlane.jpg" alt="Img Profile" />
+                            </div>
+                            <div class="notif-content">
+                              <span class="subject">Jhon Doe</span>
+                              <span class="block"> Ready for the meeting today... </span>
+                              <span class="time">12 minutes ago</span>
+                            </div>
+                          </a>
+                          <a href="#">
+                            <div class="notif-img">
+                              <img src="assets/img/talha.jpg" alt="Img Profile" />
+                            </div>
+                            <div class="notif-content">
+                              <span class="subject">Talha</span>
+                              <span class="block"> Hi, Apa Kabar ? </span>
+                              <span class="time">17 minutes ago</span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a class="see-all" href="javascript:void(0);">See all messages<i class="fa fa-angle-right"></i> </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item topbar-icon dropdown hidden-caret">
+                  <a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bell"></i>
+                    <span class="notification">4</span>
+                  </a>
+                  <ul class="dropdown-menu notif-box animated fadeIn" aria-labelledby="notifDropdown">
+                    <li>
+                      <div class="dropdown-title">You have 4 new notification</div>
+                    </li>
+                    <li>
+                      <div class="notif-scroll scrollbar-outer">
+                        <div class="notif-center">
+                          <a href="#">
+                            <div class="notif-icon notif-primary">
+                              <i class="fa fa-user-plus"></i>
+                            </div>
+                            <div class="notif-content">
+                              <span class="block"> New user registered </span>
+                              <span class="time">5 minutes ago</span>
+                            </div>
+                          </a>
+                          <a href="#">
+                            <div class="notif-icon notif-success">
+                              <i class="fa fa-comment"></i>
+                            </div>
+                            <div class="notif-content">
+                              <span class="block"> Rahmad commented on Admin </span>
+                              <span class="time">12 minutes ago</span>
+                            </div>
+                          </a>
+                          <a href="#">
+                            <div class="notif-img">
+                              <img src="assets/img/profile2.jpg" alt="Img Profile" />
+                            </div>
+                            <div class="notif-content">
+                              <span class="block"> Reza send messages to you </span>
+                              <span class="time">12 minutes ago</span>
+                            </div>
+                          </a>
+                          <a href="#">
+                            <div class="notif-icon notif-danger">
+                              <i class="fa fa-heart"></i>
+                            </div>
+                            <div class="notif-content">
+                              <span class="block"> Farrah liked Admin </span>
+                              <span class="time">17 minutes ago</span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a class="see-all" href="javascript:void(0);">See all notifications<i class="fa fa-angle-right"></i> </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item topbar-icon dropdown hidden-caret">
+                  <a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false">
+                    <i class="fas fa-layer-group"></i>
+                  </a>
+                  <div class="dropdown-menu quick-actions animated fadeIn">
+                    <div class="quick-actions-header">
+                      <span class="title mb-1">Quick Actions</span>
+                      <span class="subtitle op-7">Shortcuts</span>
+                    </div>
+                    <div class="quick-actions-scroll scrollbar-outer">
+                      <div class="quick-actions-items">
+                        <div class="row m-0">
+                          <a class="col-6 col-md-4 p-0" href="#">
+                            <div class="quick-actions-item">
+                              <div class="avatar-item bg-danger rounded-circle">
+                                <i class="far fa-calendar-alt"></i>
+                              </div>
+                              <span class="text">Calendar</span>
+                            </div>
+                          </a>
+                          <a class="col-6 col-md-4 p-0" href="#">
+                            <div class="quick-actions-item">
+                              <div class="avatar-item bg-warning rounded-circle">
+                                <i class="fas fa-map"></i>
+                              </div>
+                              <span class="text">Maps</span>
+                            </div>
+                          </a>
+                          <a class="col-6 col-md-4 p-0" href="#">
+                            <div class="quick-actions-item">
+                              <div class="avatar-item bg-info rounded-circle">
+                                <i class="fas fa-file-excel"></i>
+                              </div>
+                              <span class="text">Reports</span>
+                            </div>
+                          </a>
+                          <a class="col-6 col-md-4 p-0" href="#">
+                            <div class="quick-actions-item">
+                              <div class="avatar-item bg-success rounded-circle">
+                                <i class="fas fa-envelope"></i>
+                              </div>
+                              <span class="text">Emails</span>
+                            </div>
+                          </a>
+                          <a class="col-6 col-md-4 p-0" href="#">
+                            <div class="quick-actions-item">
+                              <div class="avatar-item bg-primary rounded-circle">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                              </div>
+                              <span class="text">Invoice</span>
+                            </div>
+                          </a>
+                          <a class="col-6 col-md-4 p-0" href="#">
+                            <div class="quick-actions-item">
+                              <div class="avatar-item bg-secondary rounded-circle">
+                                <i class="fas fa-credit-card"></i>
+                              </div>
+                              <span class="text">Payments</span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="nav-item topbar-user dropdown hidden-caret">
+                  <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#" aria-expanded="false">
+                    <div class="avatar-sm">
+                      <img src="assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle" />
+                    </div>
+                    <span class="profile-username">
+                      <span class="op-7">Hi,</span>
+                      <span class="fw-bold">Hizrian</span>
+                    </span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-user animated fadeIn">
+                    <div class="dropdown-user-scroll scrollbar-outer">
+                      <li>
+                        <div class="user-box">
+                          <div class="avatar-lg">
+                            <img src="assets/img/profile.jpg" alt="image profile" class="avatar-img rounded" />
+                          </div>
+                          <div class="u-text">
+                            <h4>Hizrian</h4>
+                            <p class="text-muted">hello@example.com</p>
+                            <a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">My Profile</a>
+                        <a class="dropdown-item" href="#">My Balance</a>
+                        <a class="dropdown-item" href="#">Inbox</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Account Setting</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Logout</a>
+                      </li>
+                    </div>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <!-- Header End Navbar -->
+        </div>
+        <div class=""></div>
+      </main>
+    </div>
+
+    <!-- ---------------
+    ================ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <script src="js/config.js"></script>
+  </body>
+</html>

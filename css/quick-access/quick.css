@@ -1,0 +1,41 @@
+h3 {
+  font-size: calc(18px + 0.1vw);
+}
+
+li {
+  list-style: none;
+}
+
+/* --------------------------- */
+.text-d {
+  color: #0084c0;
+}
+
+.text-a {
+  color: #f47920;
+}
+
+.text-r {
+  color: #00ad4d;
+}
+
+.text-p {
+  color: #ffdd0c;
+}
+
+.text-a2 {
+  color: #7b439a;
+}
+
+.text-n {
+  color: #00c2f3;
+}
+
+.page-layout-dpn26x58 {
+  align-items: stretch;
+  display: flex;
+  width: 100%;
+}
+.page-layout-dpn26x58 .main-content-area {
+  flex: 1 1 100%;
+}/*# sourceMappingURL=quick.css.map */
