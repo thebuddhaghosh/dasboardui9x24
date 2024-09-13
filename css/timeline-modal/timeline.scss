@@ -1,0 +1,242 @@
+$floting-status-icon-size: calc(25px + 0.4vw);
+$popup-thumb-image: calc(40px + 0.4vw);
+$pending: #ffb800;
+$success: #00b512;
+$rejected: #f00000;
+
+@mixin flex-v-center($gap) {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+}
+@mixin dotted-border-y {
+  background-image: linear-gradient(rgb(114, 114, 114) 33%, rgba(255, 255, 255, 0) 0%);
+  background-position: right;
+  background-size: 2px 13px;
+  background-repeat: repeat-y;
+}
+@mixin dotted-border-x {
+  background-image: linear-gradient(to right, rgb(102, 102, 102) 33%, rgba(255, 255, 255, 0) 0%);
+  background-position: bottom;
+  background-size: 13px 2px;
+  background-repeat: repeat-x;
+}
+@mixin g-place-center {
+  display: grid;
+  place-content: center;
+}
+
+.flex-v-center {
+  @include flex-v-center(0);
+}
+
+//   --------------
+.timeline-popup {
+  .header-elements {
+    @include flex-v-center(4rem);
+    justify-content: start;
+    flex-wrap: wrap;
+    background-color: rgb(124, 124, 124);
+    color: #fff;
+    padding: 1rem;
+  }
+  .data-list {
+    position: relative;
+    @include flex-v-center(8px);
+    .text {
+      font-size: calc(12px + 0.2vw);
+    }
+    .badge {
+      font-size: calc(12px + 0.2vw);
+      font-weight: 500;
+    }
+    &:not(:first-child) {
+      &::before {
+        position: absolute;
+        content: "";
+        height: 90%;
+        width: 1px;
+        background-color: #f2f2f2;
+        left: -10%;
+      }
+    }
+  }
+  .timeline-list-wrapper {
+    position: relative;
+    padding-left: 2rem;
+    margin-top: 1rem;
+    &::after {
+      position: absolute;
+      content: "";
+      top: -10px;
+      left: 2px;
+      height: calc(100% + 15px);
+      width: 1px;
+      //   background-image: linear-gradient(black 33%, rgba(255, 255, 255, 0) 0%);
+      //   background-position: right;
+      //   background-size: 2px 13px;
+      //   background-repeat: repeat-y;
+      @include dotted-border-y;
+    }
+    .timeline-card {
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        transform: translateY(-50%);
+        left: -2.5rem;
+        height: 20px;
+        width: 20px;
+        background-color: #f2f2f2;
+        z-index: 9;
+      }
+      padding: 0;
+      &.st-pending {
+        border-color: rgba($color: $pending, $alpha: 0.5);
+        .heading {
+          background-color: rgba($color: $pending, $alpha: 0.5);
+        }
+        .card-body {
+          background-color: rgba($color: $pending, $alpha: 0.05);
+        }
+
+        &::after {
+          background-color: $pending;
+        }
+      }
+      &.st-success {
+        border-color: rgba($color: $success, $alpha: 0.5);
+        .heading {
+          background-color: rgba($color: $success, $alpha: 0.5);
+        }
+        .card-body {
+          background-color: rgba($color: $success, $alpha: 0.05);
+        }
+        &::after {
+          background-color: $success;
+        }
+      }
+      &.st-rejected {
+        border-color: rgba($color: $rejected, $alpha: 0.5);
+        .heading {
+          background-color: rgba($color: $rejected, $alpha: 0.5);
+        }
+        .card-body {
+          background-color: rgba($color: $rejected, $alpha: 0.05);
+        }
+        &::after {
+          background-color: $rejected;
+        }
+      }
+      .heading {
+        padding: 0.5rem 1rem;
+        background-color: #f2f2f2;
+        @include flex-v-center(8px);
+        justify-content: space-between;
+        .value {
+          font-size: calc(12px + 0.2vw);
+          font-weight: 600;
+        }
+      }
+      .card-body {
+        .desc-wrapper {
+          font-size: calc(10px + 0.2vw);
+          .text {
+            font-weight: 600;
+          }
+          .data-desc {
+            margin-top: 1rem;
+          }
+          .thumb-icon {
+            width: $popup-thumb-image;
+            height: $popup-thumb-image;
+            margin-bottom: 8px;
+          }
+        }
+        .flow-status-wrapper {
+          position: relative;
+          @include flex-v-center(1rem);
+          justify-content: space-between;
+          flex-wrap: wrap;
+          z-index: 2;
+          &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            width: 65%;
+            height: 1.5px;
+            @include dotted-border-x;
+            z-index: -1;
+          }
+          .card:not(:first-child) {
+            padding: 0;
+            .title {
+              padding: 0.5rem 0.75rem;
+              background-color: #0094ff;
+              color: #fff;
+            }
+          }
+          .card {
+            padding-bottom: 0;
+            .status-icon {
+              @include g-place-center;
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              right: -16px;
+              border-radius: 50%;
+              width: $floting-status-icon-size;
+              height: $floting-status-icon-size;
+              background-color: #f2f2f2;
+              i {
+                font-size: calc(14px + 0.3vw);
+              }
+            }
+            &.requested {
+              .status-icon {
+                background-color: $pending;
+                color: #fff;
+              }
+            }
+            &.approved {
+              .status-icon {
+                background-color: $success;
+                color: #fff;
+                right: unset;
+                left: -25px;
+              }
+              .user-detail-list {
+                padding-left: 22px;
+              }
+            }
+            &.rejected {
+              .status-icon {
+                background-color: $rejected;
+                color: #fff;
+                right: unset;
+                left: -25px;
+              }
+            }
+            .title {
+              font-size: calc(12px + 0.125vw);
+            }
+            .user-detail-list {
+              padding: 8px;
+              margin: 0;
+              li {
+                color: rgba($color: #000000, $alpha: 0.5);
+                i {
+                  margin-top: 4px;
+                  font-size: calc(10px + 0.2vw);
+                }
+                @include flex-v-center(4px);
+                font-size: calc(12px + 0.1vw);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

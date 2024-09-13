@@ -54,6 +54,7 @@ a {
 i {
   font-size: calc(18px + 0.2vw);
 }
+.badge,
 .btn {
   border-radius: $b-radius-0;
   @include flex-v-center(8px);

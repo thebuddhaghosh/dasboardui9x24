@@ -47,6 +47,7 @@ i {
   font-size: calc(18px + 0.2vw);
 }
 
+.badge,
 .btn {
   border-radius: 0;
   display: flex;
