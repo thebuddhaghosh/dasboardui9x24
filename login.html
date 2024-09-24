@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/common/common.css" />
+    <link rel="stylesheet" href="css/login/login.css" />
+    <title>Login Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="login-page">
+      <form action="#" class="card login-form dpn-26x58-form">
+        <div class="row g-4">
+          <div class="col-md-12">
+            <h2 class="title">Login</h2>
+          </div>
+          <!-- image ends here -->
+          <div class="col-12">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="floatingInput" placeholder="John Doe" aria-describedby="floatingInputHelp" />
+              <label for="floatingInput">Username or Email </label>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="floatingInput" placeholder="John Doe" aria-describedby="floatingInputHelp" />
+              <label for="floatingInput">Password</label>
+            </div>
+          </div>
+          <div class="col-12">
+            <div id="RefreshCaptchaDiv" class="input-group form-group mb-3">
+              <span id="RefreshCaptchaBtn" class="input-group-text text-center logWidth7-5" style="cursor: pointer"><i class="ti-reload"></i></span>
+              <div class="form-control logWidth32-5">
+                <b><span id="CaptchaImgSpan" style="font-size: 17.5px; font-weight: 500; color: #000; font-style: italic">29 + 4</span><span style="font-size: 15px; font-weight: 500; color: #000; font-style: italic">= </span></b>
+              </div>
+              <input type="text" class="form-control logWidth60" id="UserCaptchaTxt" name="UserCaptchaTxt" placeholder="Captcha" maxlength="3" autocomplete="new-password" data-bv-field="UserCaptchaTxt" /><i class="form-control-feedback bv-no-label" data-bv-icon-for="UserCaptchaTxt" style="display: none"></i><small class="help-block" data-bv-validator="notEmpty" data-bv-for="UserCaptchaTxt" data-bv-result="NOT_VALIDATED" style="display: none">Please enter Captcha.</small><small class="help-block" data-bv-validator="regexp" data-bv-for="UserCaptchaTxt" data-bv-result="NOT_VALIDATED" style="display: none">Please enter valid Captcha.</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="UserCaptchaTxt" data-bv-result="NOT_VALIDATED" style="display: none">Maximum 3 characters allowed in Captcha.</small>
+            </div>
+          </div>
+          <div class="col-12 align-content-center">
+            <button class="btn btn-primary px-4" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Login</button>
+          </div>
+          <div class="col-12">
+            <span class="seprator-or">or</span>
+          </div>
+        </div>
+      </form>
+      <p class="footer-text text-white">
+        Powered by <strong>DARPAN<sup>©</sup></strong> Dashboard Service of National Informatics Centre (NIC), Government of India
+      </p>
+    </div>
+  </body>
+</html>

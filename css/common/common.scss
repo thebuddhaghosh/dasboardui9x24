@@ -139,6 +139,20 @@ i {
         font-family: samarkan;
         font-size: calc(22px + 0.2vw);
       }
+      .avatar {
+        position: relative;
+        width: 2.375rem;
+        height: 2.375rem;
+        cursor: pointer;
+      }
+      .hide-arrow {
+        &::after {
+          display: none;
+        }
+      }
+      .dropdown-item {
+        @include flex-v-center(8px);
+      }
     }
   }
 }
@@ -180,6 +194,7 @@ i {
           }
         }
       }
+      &:disabled,
       &:focus {
         box-shadow: none !important;
         ~ label {

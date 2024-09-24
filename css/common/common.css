@@ -133,6 +133,20 @@ i {
   font-family: samarkan;
   font-size: calc(22px + 0.2vw);
 }
+.main-content-area header.navbar-dpn-top .avatar {
+  position: relative;
+  width: 2.375rem;
+  height: 2.375rem;
+  cursor: pointer;
+}
+.main-content-area header.navbar-dpn-top .hide-arrow::after {
+  display: none;
+}
+.main-content-area header.navbar-dpn-top .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
 /*----------------- Buttons Ends Here
 ============================================
@@ -180,11 +194,13 @@ i {
   z-index: -1;
   height: auto;
 }
-.dpn-26x58-form .form-floating .form-select:focus,
+.dpn-26x58-form .form-floating .form-select:disabled, .dpn-26x58-form .form-floating .form-select:focus,
+.dpn-26x58-form .form-floating .form-control:disabled,
 .dpn-26x58-form .form-floating .form-control:focus {
   box-shadow: none !important;
 }
-.dpn-26x58-form .form-floating .form-select:focus ~ label,
+.dpn-26x58-form .form-floating .form-select:disabled ~ label, .dpn-26x58-form .form-floating .form-select:focus ~ label,
+.dpn-26x58-form .form-floating .form-control:disabled ~ label,
 .dpn-26x58-form .form-floating .form-control:focus ~ label {
   transform: scale(0.85) translateY(-1.75rem) translateX(0.15rem);
 }

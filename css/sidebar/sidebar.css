@@ -5,7 +5,7 @@
   height: 100%;
   max-width: 264px;
   min-width: 264px;
-  background-color: #333;
+  background-color: #0f355e;
   border-right: 1px solid #f2f2f2;
   transition: all 0.35s ease-in-out;
   box-shadow: 0 0 20px 0 rgba(49, 57, 66, 0.05);
@@ -19,10 +19,41 @@
   /* Handle on hover */
 }
 .side-bar-dpn26x58.collapsed {
-  margin-left: -264px;
+  margin-left: -180px;
+  transition: 0.4s all;
 }
 .side-bar-dpn26x58.collapsed + .main-content-area {
-  max-width: 100%;
+  max-width: calc(100% - 80px);
+}
+.side-bar-dpn26x58.collapsed .sidebar-nav .sidebar-item .collapsing,
+.side-bar-dpn26x58.collapsed .sidebar-nav .sidebar-item .collapse {
+  display: none !important;
+}
+.side-bar-dpn26x58.collapsed .sidebar-nav .sidebar-item .text {
+  display: none;
+  transition: all 0.8s display;
+}
+.side-bar-dpn26x58.collapsed .sidebar-nav .sidebar-item .sidebar-link {
+  padding: 1rem 1.625rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.side-bar-dpn26x58.collapsed .sidebar-nav .sidebar-item .sidebar-link[data-bs-toggle=collapse]::after {
+  display: none !important;
+  transition: all 0.8s display;
+}
+.side-bar-dpn26x58.collapsed .sidebar-nav .sidebar-header {
+  display: none !important;
+  transition: all 0.8s display;
+}
+.side-bar-dpn26x58.collapsed .top-menu {
+  margin-top: 18px;
+  transition: all 0.5s ease-in-out;
+}
+.side-bar-dpn26x58.collapsed .top-menu .sidebar-logo {
+  display: none;
+  transition: all 0.5s display;
 }
 .side-bar-dpn26x58 .sidebar-logo {
   padding: 1rem 0.75rem 0.1rem;
@@ -41,7 +72,8 @@
   text-align: left;
 }
 .side-bar-dpn26x58 .sidebar-logo a .logo-sidebar {
-  width: calc(75px + 0.2vw);
+  width: calc(180px - 0.2vw);
+  margin: 0 auto;
 }
 .side-bar-dpn26x58 .sidebar-nav {
   padding: 0;
@@ -51,7 +83,7 @@
   font-size: 0.75rem;
   padding: 1.5rem 0.75rem 0.375rem;
   position: relative;
-  background-color: #333;
+  background-color: #0f355e;
   z-index: 1;
 }
 .side-bar-dpn26x58 .sidebar-nav .sidebar-header::after {
@@ -70,7 +102,7 @@
   content: "";
   width: 45%;
   height: 10px;
-  background-color: #333;
+  background-color: #0f355e;
   left: 0;
   top: 72%;
   transform: translateY(-75%);
@@ -136,4 +168,8 @@
 }
 .side-bar-dpn26x58::-webkit-scrollbar-thumb:hover {
   background: #696cff;
+}
+
+.tooltip-menu {
+  left: 80px;
 }/*# sourceMappingURL=sidebar.css.map */
