@@ -1,3 +1,6 @@
+@use "../variables/variables" as var;
+// var imported ------------
+
 .login-page {
   display: grid;
   place-content: center;
@@ -14,13 +17,13 @@
     top: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgba($color: #000000, $alpha: 0.6);
+    background-color: rgba($color: var.$dark-black, $alpha: 0.6);
     z-index: -1;
 
     backdrop-filter: blur(8px);
   }
   .footer-text {
-    color: #fff;
+    color: var.$white;
   }
   .login-form {
     position: relative;
@@ -38,7 +41,7 @@
         height: 1px;
         top: 60%;
         left: 50%;
-        background-color: #f2f2f2;
+        background-color: var.$f2f2;
         transform: translate(-50%, -50%);
         z-index: -2;
       }
@@ -49,7 +52,7 @@
         height: 40px;
         top: 60%;
         left: 50%;
-        background-color: #fff;
+        background-color: var.$white;
         transform: translate(-50%, -50%);
         z-index: -1;
       }

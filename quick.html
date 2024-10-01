@@ -128,14 +128,21 @@
             <!-- image ends here -->
             <div class="col-md-6">
               <div class="form-floating">
-                <input type="text" class="form-control" id="floatingInput" placeholder="John Doe" aria-describedby="floatingInputHelp" />
+                <input type="text" class="form-control" id="floatingInput" placeholder="John Doe" aria-describedby="floatingInputHelp" required />
                 <label for="floatingInput">Sector Name(English) </label>
-                <div id="floatingInputHelp" class="form-text">Maximun length 50, allowed characters are [A-Z, a-z] [space] [&,-]</div>
+                <!-- <div id="floatingInputHelp" class="form-text">Maximun length 50, allowed characters are [A-Z, a-z] [space] [&,-]</div> -->
+                <span class="info-icon modal-left"
+                  >i
+                  <span class="hidden-info">
+                    <p class="text">Maximun length 50</p>
+                    <p class="text">allowed characters are [A-Z, a-z] [space] [&,-]</p>
+                  </span>
+                </span>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-floating">
-                <input type="text" class="form-control" id="floatingInput" placeholder="John Doe" aria-describedby="floatingInputHelp" />
+                <input type="text" class="form-control" id="floatingInput" placeholder="John Doe" aria-describedby="floatingInputHelp" required />
                 <label for="floatingInput">Sector Name (Regional)</label>
                 <div id="floatingInputHelp" class="form-text">Maximun length 60, allowed characters are [A-Z, a-z] [space] [&,-]</div>
               </div>

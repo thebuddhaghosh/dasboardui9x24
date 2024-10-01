@@ -1,15 +1,10 @@
-$body-bg: #f9f9f9;
-$white: #fff;
-$b-radius-14: 14px;
-$b-radius-0: 0;
-$primary: #696cff;
-$border-color: #dee2e6;
+@use "../variables/variables" as var;
 
 /*----------------- Variables Ends Here
 ============================================
 ------------------- Default Starts  Here   */
 body {
-  background-color: $body-bg;
+  background-color: var.$body-bg;
 }
 
 p,
@@ -56,7 +51,7 @@ i {
 }
 .badge,
 .btn {
-  border-radius: $b-radius-0;
+  border-radius: var.$b-radius-0;
   @include flex-v-center(8px);
 }
 
@@ -66,8 +61,8 @@ i {
 
 .card {
   border-radius: 0;
-  border-color: $border-color;
-  background-color: $white;
+  border-color: var.$border-color;
+  background-color: var.$white;
   padding: 1rem;
   .count {
     font-size: calc(20px + 0.4vw);
@@ -85,14 +80,14 @@ i {
 
 // 2nd Card -----
 .navcard {
-  background-color: $white;
+  background-color: var.$white;
   padding: 1rem;
-  border: 1px solid $border-color;
+  border: 1px solid var.$border-color;
   .btn-nav {
     width: calc(34px + 0.4vw);
     height: calc(34px + 0.4vw);
     background-color: #f0f0f0;
-    border-radius: $b-radius-0;
+    border-radius: var.$b-radius-0;
     display: grid;
     place-content: center;
     i {
@@ -109,12 +104,12 @@ i {
 -------------------  Buttons Components   */
 
 .btn-primary {
-  background-color: $primary;
-  border-color: $primary;
-  color: $white;
+  background-color: var.$primary;
+  border-color: var.$primary;
+  color: var.$white;
   &:hover {
-    background-color: $primary;
-    box-shadow: 0 0 14px rgba($color: $primary, $alpha: 0.4);
+    background-color: var.$primary;
+    box-shadow: 0 0 14px rgba($color: var.$primary, $alpha: 0.4);
   }
 }
 
@@ -132,7 +127,7 @@ i {
   max-width: calc(100% - 264px);
   margin-left: auto;
   header {
-    background-color: $white;
+    background-color: var.$white;
     &.navbar-dpn-top {
       gap: 14px;
       .darpan-logo-text {
@@ -171,6 +166,7 @@ i {
   .form-floating {
     label {
       transform: translateY(-8px);
+      padding-right: 1.25rem;
     }
     .form-text {
       font-size: calc(9px + 0.2vw);
@@ -180,9 +176,20 @@ i {
       padding: 0.75rem 0.75rem;
       border-radius: 0;
       height: calc(2.5rem + calc(var(--bs-border-width) * 2));
+      &:required {
+        ~ label {
+          &::before {
+            position: absolute;
+            content: "*";
+            color: red;
+            font-size: 18px;
+            right: 10px;
+            top: 12px;
+          }
+        }
+      }
       &:not(:placeholder-shown) {
-        padding-top: 0.625rem;
-        padding-bottom: 0.625rem;
+        padding: 0.625rem auto;
         ~ label {
           height: auto;
           transform: scale(0.85) translateY(-1.75rem) translateX(0.15rem);
@@ -209,7 +216,7 @@ i {
     }
   }
   .thumb-icon-upload-wrapper {
-    // border: 1px solid #f2f2f2;
+    // border: 1px solid var.$f2f2;
     border: 1px dashed #c1c1c1;
     @include flex-v-center(8px);
     padding: 0.75rem 1.75rem;
@@ -237,7 +244,7 @@ i {
         content: "";
         height: 90%;
         width: 1px;
-        background-color: #f2f2f2;
+        background-color: var.$f2f2;
         top: 40%;
         left: -8%;
         transform: translateY(-40%);
@@ -272,16 +279,85 @@ select {
 }
 .modal-backdrop {
   backdrop-filter: blur(3px);
-  background-color: rgba($color: #000000, $alpha: 0.5);
+  background-color: rgba($color: var.$dark-black, $alpha: 0.5);
   opacity: unset !important;
 }
 
-/*----------------- Modal Ends Here
+/*----------------- Modal Ends Here --------
 ============================================
--------------------  Responsive css   */
+-------------------  Responsive css --------  */
 
 @media (min-width: 768px) {
   .content {
     width: auto;
   }
+}
+
+// -=----=----=----=-==----=-=---===--=-=-=---=--=-=-=--
+// -=----=----=----=-==----=-=---===--=-=-=---=--=-=-=--
+// -=----=----=----=-==----=-=---===--=-=-=---=--=-=-=--
+
+.info-icon {
+  display: inline-block;
+  background: #d2d2d2;
+  height: 18px;
+  width: 18px;
+  text-align: center;
+  line-height: 1;
+  color: black;
+  font-weight: 600;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  z-index: 99;
+  &:hover {
+    overflow: visible;
+    .hidden-info {
+      display: block;
+      opacity: 1;
+    }
+  }
+  .hidden-info {
+    position: absolute;
+    top: 50%;
+    left: 26px;
+    width: max-content;
+    text-align: left;
+    background: var.$theme-blue;
+    padding: 10px;
+    display: none;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: opacity 0.25s ease-in-out;
+    color: #fff;
+    .text {
+      font-size: 12px;
+      font-weight: 400;
+      padding: 3px 0;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(185 185 185 / 0.5);
+  // border-radius: 10px;
+  background: rgba($color: var.$border-color, $alpha: 0.2);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var.$border-color;
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var.$primary;
 }

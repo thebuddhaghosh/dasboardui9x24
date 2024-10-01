@@ -1,3 +1,4 @@
+@use "../variables/variables" as var;
 h3 {
   font-size: calc(18px + 0.1vw);
   // color: #fff;
@@ -8,27 +9,27 @@ li {
 }
 /* --------------------------- */
 .text-d {
-  color: #0084c0;
+  color: var.$dpn_1;
 }
 
 .text-a {
-  color: #f47920;
+  color: var.$dpn_2;
 }
 
 .text-r {
-  color: #00ad4d;
+  color: var.$dpn_3;
 }
 
 .text-p {
-  color: #ffdd0c;
+  color: var.$dpn_4;
 }
 
 .text-a2 {
-  color: #7b439a;
+  color: var.$dpn_5;
 }
 
 .text-n {
-  color: #00c2f3;
+  color: var.$dpn_6;
 }
 
 // ============================
