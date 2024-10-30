@@ -100,12 +100,27 @@ i {
 /*----------------- Cards Ends Here
 ============================================
 -------------------  Buttons Components   */
+.card .nav-pills .nav-link {
+  color: #333;
+}
+
+.card .nav-pills .nav-link.active,
 .btn-primary {
   background-color: #696cff;
   border-color: #696cff;
   color: #fff;
+  border-radius: 0;
 }
+.card .nav-pills .nav-link.active:hover,
 .btn-primary:hover {
+  background-color: #696cff;
+  box-shadow: 0 0 14px rgba(105, 108, 255, 0.4);
+}
+
+.btn-outline-primary {
+  border-color: #696cff;
+}
+.btn-outline-primary:hover {
   background-color: #696cff;
   box-shadow: 0 0 14px rgba(105, 108, 255, 0.4);
 }
@@ -124,7 +139,10 @@ i {
   margin-left: auto;
 }
 .main-content-area header {
-  background-color: #fff;
+  background: url("../../images/headerdpn.png"), #0f355e;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 }
 .main-content-area header.navbar-dpn-top {
   gap: 14px;
@@ -349,4 +367,25 @@ select.form-select:not([multiple]) {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #696cff;
+}
+
+.footer-dpn-26x58 {
+  padding: 0.25rem 0;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.footer-dpn-26x58 p {
+  color: #fff;
+}
+.footer-dpn-26x58 .logo {
+  max-width: 120px;
+  background-color: #fff;
+  padding: 8px 10px;
+}
+.footer-dpn-26x58 .logo.darpan {
+  background-color: transparent;
+  padding: none;
+  max-width: 90px;
+}
+.footer-dpn-26x58 .logo img {
+  height: 100%;
 }/*# sourceMappingURL=common.css.map */

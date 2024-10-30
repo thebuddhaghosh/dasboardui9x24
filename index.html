@@ -17,24 +17,23 @@
 
     <title>New Dashboard</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   </head>
 
   <body>
     <div class="quickpage-layout page-layout-dpn26x58">
       <!-- Sidebar -->
-      <div id="sidemenuDemo" class="side-bar-dpn26x58 mainnav-lg"></div>
+      <div id="sidebar" class="side-bar-dpn26x58 mainnav-lg"></div>
       <!-- Main Component -->
       <main class="main-content-area">
-        <section class="top-header sticky-top">
+        <!-- <section class="top-header w-100">
           <img src="images/headerdpn.png" class="img-fluid" alt="" />
-        </section>
+        </section> -->
         <header class="navbar navbar-dpn-top navbar-expand px-3 align-items-center">
           <!-- Button for sidebar toggle -->
           <div class="left-part"></div>
-          <button class="btn sidemenu-toggle" type="button" data-bs-theme="dark">
-            <i class="bx bx-menu"></i>
-          </button>
-          <div class="darpan-logo-text">
+
+          <!-- <div class="darpan-logo-text">
             <strong class="d-flex">
               <span class="text-d">D</span>
               <span class="text-a">a</span>
@@ -43,17 +42,8 @@
               <span class="text-a2">a</span>
               <span class="text-n">n</span>
             </strong>
-          </div>
+          </div> -->
           <div class="navbar-nav-right d-flex align-items-center ms-auto" id="navbar-collapse">
-            <!-- Search -->
-            <div class="navbar-nav align-items-center">
-              <div class="nav-item d-flex align-items-center">
-                <i class="bx bx-search fs-4 lh-0"></i>
-                <input type="text" class="form-control border-0 shadow-none" placeholder="Search..." aria-label="Search..." />
-              </div>
-            </div>
-            <!-- /Search -->
-
             <ul class="navbar-nav flex-row align-items-center ms-auto">
               <!-- Place this tag where you want the button to render. -->
               <li class="nav-item lh-1 me-3">
@@ -113,25 +103,49 @@
             </ul>
           </div>
         </header>
+        <!-- main components starts here -->
         <div class="content px-3 py-2">
           <div class="container-fluid">
             <div id="quickpageDemo"></div>
             <div id="dashBoard"></div>
           </div>
         </div>
+        <!-- footer starts here -->
+        <footer class="footer-dpn-26x58">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-2 align-self-center">
+                <div class="logo darpan">
+                  <img src="images/logobw.png" alt="darpan" class="img-fluid" />
+                </div>
+              </div>
+              <div class="col-md-8 align-self-center">
+                <p class="text-center">
+                  Content on this website is managed and owned by UP CM Dashboard Data Collection Portal Powered by Darpan.
+                  <small class="d-block">Powered by DARPAN© Dashboard Service of National Informatics Centre (NIC), Government of India</small>
+                </p>
+              </div>
+              <div class="col-md-2 align-self-center">
+                <div class="logo nic">
+                  <img src="images/niclogo.png" alt="darpan" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
       </main>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.js"></script>
+    <!-- <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.js"></script> -->
     <script src="js/config.js"></script>
     <script src="js/nav-popover.js"></script>
 
     <script>
-      $("#sidemenuDemo").load("sidemenu.html");
-      // $("#dashBoard").load("dashboard.html");
-      $("#dashBoard").load("quick.html");
+      $("#sidebar").load("sidemenu.html");
+      $("#dashBoard").load("dashboard.html");
+      // $("#dashBoard").load("quick.html");
       // $("#quickpageDemo").load("timelinecomp.html");
     </script>
   </body>

@@ -102,11 +102,26 @@ i {
 /*----------------- Cards Ends Here
 ============================================
 -------------------  Buttons Components   */
-
+.card {
+  .nav-pills {
+    .nav-link {
+      color: #333;
+    }
+  }
+}
+.card .nav-pills .nav-link.active,
 .btn-primary {
   background-color: var.$primary;
   border-color: var.$primary;
   color: var.$white;
+  border-radius: 0;
+  &:hover {
+    background-color: var.$primary;
+    box-shadow: 0 0 14px rgba($color: var.$primary, $alpha: 0.4);
+  }
+}
+.btn-outline-primary {
+  border-color: var.$primary;
   &:hover {
     background-color: var.$primary;
     box-shadow: 0 0 14px rgba($color: var.$primary, $alpha: 0.4);
@@ -127,7 +142,13 @@ i {
   max-width: calc(100% - 264px);
   margin-left: auto;
   header {
-    background-color: var.$white;
+    // background-color: var.$theme-blue;
+    // background-image: url("../../images/headerdpn.png");
+    background: url("../../images/headerdpn.png"), #0f355e;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    // background-color: var.$white;
     &.navbar-dpn-top {
       gap: 14px;
       .darpan-logo-text {
@@ -360,4 +381,25 @@ select {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var.$primary;
+}
+
+.footer-dpn-26x58 {
+  padding: 0.25rem 0;
+  background-color: rgba($color: var.$dark-black, $alpha: 0.9);
+  p {
+    color: #fff;
+  }
+  .logo {
+    max-width: 120px;
+    background-color: #fff;
+    padding: 8px 10px;
+    &.darpan {
+      background-color: transparent;
+      padding: none;
+      max-width: 90px;
+    }
+    img {
+      height: 100%;
+    }
+  }
 }
